@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackbackground"
+    android:padding="24dp"
+    tools:context=".TakeTheQuiz">
+    <!-- Context for TakeTheQuiz java file-->
+    <TextView
+        android:id="@+id/total_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Questions : "
+        android:textSize="15dp"
+        android:textColor="@color/white"/>
+    <!-- Displays the amount of questions to be answered -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TimerText"
+        android:text="00:30"
+        android:layout_alignParentEnd="true"
+        android:textSize="37sp"
+        android:textColor="@color/white"/>
+    <!-- Timer text of 30 seconds to the user -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FollowingQuestions"
+        android:textStyle="italic"
+        android:text="Answer the following questions"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:layout_margin="20dp"
+        android:layout_above="@id/choices_layout"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choices_layout"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <!-- At this point, each Answer will be display
+         and gaining information from the QuestionsAndAnswers
+         java file-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AnswerA"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Answer A"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AnswerB"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Answer B"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AnswerC"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Answer C"
+            android:textColor="@color/black"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AnswerD"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Answer D"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+    <!-- Button ID declared for the user to submit their
+     response to each of the five questions-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SubmitBtn"
+        android:backgroundTint="#84c07f"
+        android:text="Submit your response"
+        android:layout_below="@id/choices_layout"
+        android:layout_marginTop="70dp"/>
+
+
+
+</RelativeLayout>
